@@ -38,7 +38,7 @@ function getPlayerCount()
 
     playerCount = PlayerAPI.PlayerCount
     Debug("Player Count: ", playerCount)
-    PlayerCountt.GetComponent("UnityEngine.UI.Text").text = "Player Count: " .. playerCount
+    PlayerCount.GetComponent("UnityEngine.UI.Text").text = "Player Count: " .. playerCount
 end
 
 function getplayerList()
@@ -56,7 +56,6 @@ function getplayerList()
     end
   
     Debug("Players in the world:" .. table.concat(playerList, ", "))
-    Debug("Player Count:", playerCount)
 
     PlayerList.GetComponent("UnityEngine.UI.Text").text = "Players:\n" .. table.concat(playerList, "\n") -- Update player list text with newlines
 end
