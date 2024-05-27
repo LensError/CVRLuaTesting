@@ -4,7 +4,7 @@ UI = require("UnityEngine.UI")
 local updateTime = 60.0 -- Update time in seconds for player list
 local lastUpdateTime = 0.0 -- Tracks the time of the last update (player list)
 
-DEBUG = true
+DEBUG = false
 
 local function Debug(message, ...)
     -- Check DEBUG flag
