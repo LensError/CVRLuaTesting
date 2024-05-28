@@ -15,7 +15,7 @@ local function Debug(message)
 -- Function to spawn the object with CVR Interactable LuaFunctionCall
 function SpawnObject()
     if UnityEngine.Time.time >= nextSpawnTime then
-        
+
         local prefabToSpawn = BoundObjects.PrefabToSpawn -- Get the prefab to spawn
 
         -- To make it easy to align make an empty, place the empty in the prefab object and 0 all locations and rotations
@@ -29,6 +29,7 @@ function SpawnObject()
 
             -- Instantiate the prefab at the spawn location
             UnityEngine.GameObject.Instantiate(prefabToSpawn, spawnPosition, spawnRotation)
+            Debug("SpawnObject spawned!")
 
             -- Update the next allowed spawn time
             nextSpawnTime = UnityEngine.Time.time + spawnCooldown
